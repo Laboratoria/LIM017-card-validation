@@ -7,7 +7,10 @@
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [6. Hacker edition](#6-hacker-edition)
+* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
+* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [9. Checklist](#9-checklist)
 
 ***
 
@@ -349,27 +352,94 @@ mínimo del 50% de _branches_ (ramas).
 
 ***
 
-## 6. Pistas, tips y lecturas complementarias
+
+## 6. Hacker edition
+
+Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
+con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
+profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
+
+En esta versión Hacker edition puedes además de validar si el número de la 
+tarjeta es válida, mostrar la [franquicia](https://es.wikipedia.org/wiki/N%C3%BAmero_de_tarjeta_bancaria) de la tarjeta (ej: Visa, MasterCard, etc)
+usando estas [reglas de validación](https://stevemorse.org/ssn/cc.html).
+
+***
+
+## 7. Consideraciones técnicas
+
+La lógica del proyecto debe estar implementada completamente en JavaScript. En
+este proyecto NO está permitido usar librerías o frameworks, solo JavaScript puro
+también conocido como Vanilla JavaScript.
+
+No se debe utilizar la _pseudo-variable_ `this`.
+
+Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_
+y _lines_, y un mínimo del 50% de _branches_. El _boilerplate_ ya contiene el
+setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
+coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
+test`.
+
+El _boilerplate_ incluye tests (pruebas) de ejemplo como punto de partida.
+
+Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
+repositorio que contiene el _boilerplate_.
+
+El _boilerplate_ contiene una estructura de archivos como punto de partida así
+como toda la configuración de dependencias y tests de ejemplo:
+
+```text
+./
+├── .babelrc
+├── .editorconfig
+├── .eslintrc
+├── .gitignore
+├── FAQ.md
+├── README.md
+├── package.json
+├── src
+│   ├── index.html
+│   ├── index.js
+│   ├── style.css
+│   └── validator.js
+└── test
+    ├── .eslintrc
+    └── validator.spec.js
+```
+
+El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
+[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
+`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
+automáticamente antes de ejecutar las pruebas (tests) cuando usamos el comando
+`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
+configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
+información sobre el parser que usar (qué version de JavaScript/ECMAScript), el
+entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
+En cuanto a reglas/guías de estilo en sí,
+usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
+
+***
+
+## 8. Pistas, tips y lecturas complementarias
 
 ### Primeros pasos
 
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
    condiciones, algo como [Atom](https://atom.io/) o
-   [Code](https://code.visualstudio.com/).
+   [VSCode](https://code.visualstudio.com/).
 2. Para ejecutar los comandos a continuación necesitarás una :shell:
-   [UNIX Shell](https://curriculum.laboratoria.la/es/topics/shell),
+   [UNIX Shell](https://github.com/Laboratoria/bootcamp/tree/main/topics/shell),
    que es un programita que interpreta líneas de comando (command-line
-   interpreter) así como tener [git](https://curriculum.laboratoria.la/es/topics/scm/01-git)
+   interpreter) así como tener [git](https://github.com/Laboratoria/bootcamp/tree/main/topics/scm/01-git)
    instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
    ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
    también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
    que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows
    10 o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Debe realizar un :fork_and_knife:
+3. Debes realizar un :fork_and_knife:
    [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
    tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. 
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
+   en ese repo.
+4. Despues de realizar el fork, y ya lo tienes como repo en tu propio cuenta github, :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu *fork* a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
@@ -379,6 +449,19 @@ mínimo del 50% de _branches_ (ramas).
    `npm start` para arrancar el servidor web y dirígete a
    `http://localhost:5000` en tu navegador.
 8. A codear se ha dicho! :rocket:
+
+### Achicando el gran problema en problemas más pequeños
+
+Un "superpoder" que esperamos puedas desarrollar durante el bootcamp es el de definir "mini-proyectos" que te acerquen paso a paso a la solución del "gran proyecto". Es el equvalente a comenzar armando esquinas o bordes del rompecabezas/puzzle sin saber necesariamente cómo encajarán al final. Déjate llevar y explora. Estas son algunas sugerencias:
+
+**"validar" que el input sea numérico**  
+Crea una interfaz simple con 1 caja de texto y un botón. Si escribo algo en la caja de texto 1 y le doy click al botón, quiero que valide que sea sólo números y que no esté vacío.<
+
+**"validar" si la tarjeta de crédito es válida**  
+Cuando de clic en el botón, debe indicarnos si la tarjeta es válida o no.
+
+**"mostrar" sólo los últimos 4 números**  
+Cuando de clic en el botón, sólo deben ser visibles los últimos 4 número, es decir, debe ocultar los otros números (ej: si escribo 12304589, debe salir después ####4589).
 
 ### Recursos y temas relacionados
 
@@ -431,3 +514,32 @@ Organización del Trabajo:
   esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
   poco a lo largo del -_bootcamp_.
 * [Blog: cómo funciona el algoritmo de Luhn](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-para-generar-numeros-de-tarjetas-de-credito.html).
+
+## 9. Checklist
+
+Esta sección está para ayudarte a llevar un control de lo que vas completando.
+
+### Parte Obligatoria
+
+* [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
+* [ ] `README.md` explica claramente quiénes son los usuarios y su relación con
+  el producto.
+* [ ] `README.md` explica claramente cómo el producto soluciona los
+  problemas/necesidades de los usuarios.
+* [ ] `README.md` (o otro archivo) contiene tu plan de acción - Objetivos que prioritizaste este proyecto.
+* [ ] Usa VanillaJS.
+* [ ] No utiliza `this`.
+* [ ] Implementa `validator.isValid`.
+* [ ] Implementa `validator.maskify`.
+* [ ] Pasa linter con configuración provista.
+* [ ] Pasa pruebas unitarias.
+* [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
+  mínimo del 50% de _branches_.
+* [ ] Interfaz permite escribir un número para ser validado.
+* [ ] Interfaz muestra el resultado de la validación correctamente.
+* [ ] Interfaz oculta todos los números escritos excepto los 4 últimos
+
+### Parte Opcional: "Hacker edition"
+
+* [ ] Implementa `validator.getIssuer`.
+* [ ] Interfaz muestra la franquicia de la tarjeta
