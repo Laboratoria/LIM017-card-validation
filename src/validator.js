@@ -20,8 +20,10 @@ const validator = {
       return false;
     }
   },
+maskify: function (creditCardNumber) {
+return creditCardNumber;
+}
 };
 
-//maskify: function (creditCardNumber) {
-//return creditCardNumber;
+
 export default validator;
