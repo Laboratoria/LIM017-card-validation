@@ -1,0 +1,33 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    border: 5px ;
+    text-align: center;
+}
+
+body{
+    text-align: center;
+}
+main {
+    align-items: center;
+    width: 500px;
+    border: 15px solid #7F92F1;
+    padding: 50px;
+    margin: 0 auto;
+}
+#botonVerificar {
+    size: 100px;
+    cursor: pointer;
+
+}
+
+#botonVerificar:hover {
+    box-shadow: inset 1px 4px 6px 2px rgba(0,0,0,.1);
+    background: #ddd;
+}
+
+.fechas {
+    display: inline-block;
+}
