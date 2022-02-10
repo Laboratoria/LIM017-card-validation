@@ -6,7 +6,7 @@ const validator = {
         let doblePares = creditCardNumber[posicion] * 2; //multiplica el segundo digito
           if (doblePares > 9 ) { //aplica  a cualquier numero de 2 digitos
           doblePares = doblePares.toString(); //convierto a string
-          doblePares = parseInt(doblePares[0]) + parseInt(doblePares[1]);
+          doblePares = parseInt(doblePares[0]) + parseInt(doblePares[1]); //convierto a enteros, sumo los enteros para que no se concatenen
         }
         totalFinal = totalFinal + doblePares; //se suma al total y se guarda
       } else {
