@@ -1,33 +1,171 @@
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Comfortaa';
 }
-
 header{
-    border: 5px ;
-    text-align: center;
+    background-color: white;
+    }
+
+.headerGrid {
+    height: auto;
+    display: grid;
+    grid-template-areas: 'logo logo'
+                          'menu menu';
+    grid-template-rows: auto auto;
+    }
+
+
+.c1 {
+    grid-area: logo;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    scale: 85%;
 }
 
-body{
+.navMenu {
+    grid-area: menu;
+    background-color: #73dbff;
+    padding: 10px;
     text-align: center;
-}
-main {
-    align-items: center;
-    width: 500px;
-    border: 15px solid #7F92F1;
-    padding: 50px;
-    margin: 0 auto;
-}
-#botonVerificar {
-    size: 100px;
+    margin-top: 5px;
+   }
+
+li a:hover{
+    background-color: #fab0fd;
     cursor: pointer;
+    border-radius: 10px;
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+    position: center;
+    padding: 5px;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1.5px 1.5px #c5c4c4;
+    }
+
+
+main {
+        height: auto;
+        display: grid;
+        grid-template-areas:'form ticket'
+                            'form ticket';
+        grid-template-rows: 60% auto;
+        padding: 25px;
+        text-align: center;
+        background-image: url('img/background6.jpg');
+        background-size: cover;
+}
+
+.formulario {
+    grid-area: form;
+}
+
+form{
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 25px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 25px;
+}
+
+
+label{
+    font-weight: bold;
+}
+input{
+    margin-top: 2px;
+    width: 90%;
+    height: 25px;
+}
+input[id="cvv"]{
+    width: 50px;
+    text-align: center;
+}
+input[id="guarda"]{
+   width: 10%;
+   text-align: center;
+   font-size: 15px;
+}
+
+input[id="creditCardNumber"]{
+    height: 30px;
+   
+}
+
+.fechas{
+    margin-left: 200px;
+    ;
+}
+
+#botonVerificar {
+    background-color: #5ebddd;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-left: 10%;
+    margin-bottom: 250px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-style: bold;
 }
 
 #botonVerificar:hover {
     box-shadow: inset 1px 4px 6px 2px rgba(0,0,0,.1);
-    background: #ddd;
+    background: #399ec0;
+    cursor: pointer;
 }
 
-.fechas {
-    display: inline-block;
+
+.ticket {
+    grid-area: ticket;
+    text-align: center;
+    padding-left: 0%;
+    
+
+}
+
+#ticketData{
+    margin-left: 10%;
+    border-style: dotted;
+    border-color: lightgrey;
+    background-color: rgba(240,240,240,0.5);
+    border-radius: 15px;
+    width: 80%;
+}
+.ticket>h3{
+    font-style: bold;
+    font-size: 150%;
+}
+
+.ticket>h4{
+    text-align:center;
+}
+
+span{
+    margin-inline: 15px;
+    
+}
+
+footer{
+    font-style: italic;
+    text-align: center;
 }

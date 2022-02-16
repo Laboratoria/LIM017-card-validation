@@ -18,3 +18,18 @@ function clickAlBoton (){
         }
 }
 }
+
+let meses = ["01" , "02" , "03" , "04" , "05" , "06" , "07" , "08" , "09" , "10" , "11" , "12"]
+
+
+for (let i = 0; i < meses.length; i++) {
+    let option = new Option (meses[i], meses[i])
+    document.getElementById("months").appendChild(option)
+}
+
+for (let i = 0; i < 5; i++) {
+    let years = 2022 + i
+    let option = new Option (years, years)
+    document.getElementById("year").appendChild(option)
+}
+

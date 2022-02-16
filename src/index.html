@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="index.js" type="module"></script>
+    <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1>Checkout</h1>
-      <br />
-      <br />
+    <header class= "headerGrid">
+      <div class="c1">
+        <img src="img/header2.png" id="header">
+        </div>
+      
+     <nav class="navMenu">
+       <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">Productos</a></li>
+         <li> <a href="#">Pre-Orden</a></li>
+         <li> <a href="#">FAQ</a></li>
+         <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
     </header>
     <main>
-      <h2>Nombre del titular de la tarjeta</h2>
-      <input type="text" name="nombreTitularTarjeta" />
-      <h2>Numero de la tarjeta</h2>
+      <div class="formulario">
+        <h2>Checkout</h2>
+        <form id="datosCheckout">
+          <label for="nombreTitular">Nombre del titular:</label><br>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="direccion">Dirección:</label><br>
+          <input type="text" id="direccion" name="direccion"><br><br>
+          <label for="email">Correo electronico:</label><br>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="numeroDeTarjeta">Número de tarjeta de crédito/debito</label><br>
+          <input type="text" name="creditCardNumber" id="creditCardNumber"><br><br>
+          <label for="vencimiento"> Fecha de vencimiento</label><br><br>
+          <div class="fechas">
+          <label for="mesDeVencimiento"> Mes</label>
+          <select name="month" id="months"></select>
+          <label for="añoDeVencimiento"> Año</label>
+          <select name="year" id="year"></select>
+          <label for="cvv">cvv </label>
+          <input  type="text" name="cvv" id="cvv"> <br><br>
+          <label for="guardarInfo"></label>
+          <input type="checkbox" name="guardarInfo" id="guarda">Recordar la
+          información de pago <br>
+          </div>
+          </form><br>
+      
+        <div id="botonVerificacion">
+          <button id="botonVerificar" name="validarTarjetaDeCedito">
+            Validar tarjeta de credito
+          </button>
+        </div>
+      </div>
       <br>
-      <input type="text" name="creditCardNumber" id="creditCardNumber" /> <br />
-      <br>
-        <h2>Fecha de vencimiento</h2>
-        <div class="fechas">
-        <h4>Mes</h4>
-        <select name="mesDeVencimiento">
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-          <option>05</option>
-          <option>06</option>
-          <option>07</option>
-          <option>08</option>
-          <option>09</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
-        </select>
-      </div>
-      <div class="fechas">
-        <h4>Año</h4>
-        <input type="text" name="añoDeVencimiento" id="añoV" />
-      </div>
-      <div class="fechas">
-        <h4>cvv</h4>
-        <input type="text" name="cvv" />
-      </div>
-      <br />
-      <br />
-      <div id="botonVerificacion">
-        <button id="botonVerificar" name="validarTarjetaDeCedito">
-          Validar tarjeta de credito
-        </button>
-      </div>
-      <br />
+      <aside class="ticket">
+        <h3>Ticket de producto</h3>
+          <div id="ticketData">
+        <h4><span id="product">Producto</span>    <span id="quantity">Cantidad</span> <span id="price">Precio</span></h4><br>
+          <p>Producto 1      1           S/.50.00<br>
+            Producto 2      2           S/140.00<br>
+                                <h4><b>TOTAL  S/.190.00</b></p></h4>
+          </div>
+      </aside>
     </main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
+   
+    <footer> 
+      <p>Creado con sudor y lagrimas - 2022 (c) </p>
+    </footer>
+   
   </body>
 </html>
