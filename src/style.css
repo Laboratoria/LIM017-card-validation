@@ -162,10 +162,10 @@ input[id="creditCardNumber"]{
 
 span{
     margin-inline: 15px;
-    
 }
 
 footer{
     font-style: italic;
     text-align: center;
+    font-size: 12px;
 }
