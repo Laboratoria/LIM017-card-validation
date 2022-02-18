@@ -28,7 +28,7 @@ header{
     padding: 10px;
     text-align: center;
     margin-top: 5px;
-   }
+}
 
 li a:hover{
     background-color: #fab0fd;
@@ -99,9 +99,9 @@ input[id="cvv"]{
     text-align: center;
 }
 input[id="guarda"]{
-   width: 10%;
-   text-align: center;
-   font-size: 15px;
+    width: 10%;
+    text-align: center;
+    font-size: 15px;
 }
 
 input[id="creditCardNumber"]{
@@ -139,8 +139,6 @@ input[id="creditCardNumber"]{
     grid-area: ticket;
     text-align: center;
     padding-left: 0%;
-    
-
 }
 
 #ticketData{
@@ -168,4 +166,5 @@ footer{
     font-style: italic;
     text-align: center;
     font-size: 12px;
+    font-weight: thin;
 }
