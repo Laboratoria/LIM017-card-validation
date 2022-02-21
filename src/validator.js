@@ -23,7 +23,7 @@ const validator = {
 maskify: function (creditCardNumber) {
   let numerosOcultos = "" //string para acumular
 for (let posicion = 0; posicion < creditCardNumber.length ; posicion++ ) { // loop para todo el numero
-    if (posicion >= creditCardNumber.length -4){ //checkea si es uno de los ultimos 4 caracteres
+    if (posicion >= creditCardNumber.length -4){ //checka si es uno de los ultimos 4 caracteres
       numerosOcultos =  numerosOcultos + creditCardNumber[posicion] // si es, agrega el valor real
   }
   else {
@@ -31,9 +31,17 @@ for (let posicion = 0; posicion < creditCardNumber.length ; posicion++ ) { // lo
   }
 }
 return numerosOcultos;
-}
+},
+
+getIssuer: function (creditCardNumber){
+  switch (creditCardNumber[0]) {
+    case "4":
+    return "visa"
+
+    case "5":
+      return "MasterCard"
+  }
+  }
 
 };
-
-
 export default validator;
