@@ -19,10 +19,10 @@ let idChecker = validator.getIssuer(tarjetaDeCredito);
 let logoTarjeta
 switch (idChecker) {
     case "visa":
-    logoTarjeta = "/img/visa2.png"
+    logoTarjeta =https://github.com/Sharksumi/LIM017-card-validation/blob/ID-de-tarjeta/src/img/visa2.png"
     break
     case "MasterCard":
-    logoTarjeta = "/img/mastercard.png"
+    logoTarjeta = "https://github.com/Sharksumi/LIM017-card-validation/blob/ID-de-tarjeta/src/img/mastercard.png"
     break
 }
 let imagenTarjeta = document.getElementById("creditCardID")
